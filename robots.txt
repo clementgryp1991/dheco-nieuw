@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# PREVIEW: niet indexeren. Bij livegang: Allow: / + sitemap
