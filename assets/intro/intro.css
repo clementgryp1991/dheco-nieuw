@@ -1,0 +1,20 @@
+#dxi{display:none}
+html.dxi-on{overflow:hidden}
+html.dxi-on #dxi{display:block;position:fixed;inset:0;z-index:9999;background:#e9e7e3;overflow:hidden;transition:opacity .6s ease}
+#dxi.out{opacity:0;pointer-events:none}
+#dxi canvas,#dxi .dxi-p{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:50% 48%;will-change:transform}
+#dxi .dxi-p{z-index:0}#dxi canvas{z-index:1}
+#dxi .dxi-top{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(18px,4vw,48px)}
+#dxi .dxi-top img{width:117px;height:38px}
+#dxi .dxi-skip{font:600 14px/1 Inter,system-ui,sans-serif;color:#0E3B5A;background:rgba(255,255,255,.85);border:1px solid rgba(14,59,90,.2);border-radius:999px;padding:12px 18px;cursor:pointer;min-height:44px}
+#dxi .dxi-skip:hover{background:#fff}
+#dxi .dxi-copy{position:absolute;z-index:3;left:0;right:0;bottom:0;text-align:center;padding:60px 20px max(34px,env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(243,243,243,.92) 30%,rgba(243,243,243,0));transition:opacity .3s}
+#dxi h1{font:700 clamp(30px,4.6vw,58px)/1.05 "Inter Tight",Inter,sans-serif;color:#0E3B5A;margin:0 0 10px;letter-spacing:-.02em}
+#dxi .dxi-hint{font:500 15px/1.4 Inter,sans-serif;color:#4A4A4A;margin:0;display:inline-flex;gap:10px;align-items:center}
+#dxi .dxi-hint i{width:18px;height:28px;border:2px solid #0E4599;border-radius:10px;position:relative}
+#dxi .dxi-hint i:after{content:"";position:absolute;left:50%;top:5px;width:3px;height:6px;margin-left:-1.5px;background:#0E4599;border-radius:2px;animation:dxiw 1.6s infinite}
+@keyframes dxiw{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(8px)}}
+#dxi .dxi-ill{position:absolute;z-index:3;right:12px;bottom:10px;font:500 11px/1 Inter,sans-serif;color:rgba(74,74,74,.75);background:rgba(255,255,255,.6);padding:4px 7px;border-radius:4px}
+#dxi .dxi-bar{position:absolute;z-index:3;left:0;bottom:0;height:3px;background:#0E4599;width:0}
+.dxi-again{background:none;border:0;padding:8px 0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;opacity:.8;min-height:44px}
+@media (prefers-reduced-motion:reduce){#dxi .dxi-hint i:after{animation:none}}
